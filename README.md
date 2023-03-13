@@ -2,7 +2,7 @@
 
 === Lancer le projet
 
-- - - 
+- -
 
 == Dépendances du Projet
 
