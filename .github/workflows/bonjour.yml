@@ -19,4 +19,4 @@ jobs:
       - uses: Code-Hex/neo-cowsay-action@v1
         with:
           message: "${{ steps.package.outputs.content }}"  # Affiche le contenu du fichier `README.md` à la base du dépôt
-          cow: 'satanic' # ascii art list: https://github.com/Code-Hex/Neo-cowsay/tree/master/cows
+          cow: 'bong' # ascii art list: https://github.com/Code-Hex/Neo-cowsay/tree/master/cows
