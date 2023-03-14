@@ -2,11 +2,10 @@ name: Bonjour
 on:
   - push
 jobs:
-  container-test-job:
-    runs-on: ubuntu-latest
-    container: ghcr.io/cicd-lectures/gitpod:latest
+
   cow_talking:
     runs-on: ubuntu-22.04
+    container: ghcr.io/cicd-lectures/gitpod:latest
     steps:
       - uses: actions/checkout@v3
 
