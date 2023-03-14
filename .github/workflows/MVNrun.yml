@@ -1,0 +1,25 @@
+name: MVNRun
+on:
+  - push
+jobs:
+
+  cow_talking:
+    runs-on: ubuntu-22.04
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.5
+        with:
+          maven-version: 3.8.2    
+
+      - uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu' # See 'Supported distributions' for available options
+          java-version: '17'
+      - run: mvn compile
+      - run: mvn package
+      
+
+          
