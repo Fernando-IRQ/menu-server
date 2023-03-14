@@ -5,12 +5,20 @@ jobs:
 
   cow_talking:
     runs-on: ubuntu-22.04
+    
     container: 
       image: ghcr.io/cicd-lectures/gitpod:latest
       options: --user=root
-    steps:
+    steps:          
+      - name: Read README.md
+        id: package
+        uses: actions/checkout@v3
+        with:
+          path: README.md
       - uses: actions/checkout@v3
-
-      - run: sudo apt-get install cowsay -y
-
       - run: cat README.md | cowsay # Affiche le contenu du fichier `README.md` à la base du dépôt
+
+      - uses: Code-Hex/neo-cowsay-action@v1
+        with:
+          message: "${{ steps.package.outputs.content }}"  # Affiche le contenu du fichier `README.md` à la base du dépôt
+          cow: 'satanic' # ascii art list: https://github.com/Code-Hex/Neo-cowsay/tree/master/cows
