@@ -2,10 +2,14 @@ name: Bonjour
 on:
   - push
 jobs:
-  dire_bonjour:
+  container-test-job:
+    runs-on: ubuntu-latest
+    container: ghcr.io/cicd-lectures/gitpod:latest
+  cow_talking:
     runs-on: ubuntu-22.04
     steps:
-      - run: echo "Bonjour 👋"
       - uses: actions/checkout@v3
+
       - run: sudo apt-get install cowsay -y
+
       - run: cat README.md | cowsay # Affiche le contenu du fichier `README.md` à la base du dépôt
