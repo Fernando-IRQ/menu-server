@@ -7,4 +7,5 @@ jobs:
     steps:
       - run: echo "Bonjour 👋"
       - uses: actions/checkout@v3
-      - run: cat README.md # Affiche le contenu du fichier `README.md` à la base du dépôt
+      - run: apt-get install cowsay -y
+      - run: cat README.md | cowsay # Affiche le contenu du fichier `README.md` à la base du dépôt
