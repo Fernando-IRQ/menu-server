@@ -7,6 +7,4 @@ jobs:
     steps:
       - run: echo "Bonjour 👋"
       - uses: actions/checkout@v3
-        with: 
-            repository: workspace/menu-server
       - run: cat README.md # Affiche le contenu du fichier `README.md` à la base du dépôt
