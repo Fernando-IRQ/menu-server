@@ -1,6 +1,8 @@
 name: MVNRun
 on:
   - push
+  - pull_request
+
 jobs:
 
   cow_talking:
@@ -20,6 +22,3 @@ jobs:
           java-version: '17'
       - run: mvn compile
       - run: mvn package
-      
-
-          
