@@ -22,3 +22,4 @@ jobs:
           java-version: '17'
       - run: mvn compile
       - run: mvn package
+      - run: mvn verify
